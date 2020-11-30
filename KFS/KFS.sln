@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BAL", "BAL", "{4610919D-4A27-46A0-B8C8-3FB7A5850623}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{409F70A6-EC60-4A31-940A-3CF9BF877465}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KFS.BAL", "KFS.BAL\KFS.BAL.csproj", "{E65A96A4-82B4-4276-9AB6-57B50229455D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KFS.API", "KFS.API\KFS.API.csproj", "{53998FEE-25DD-45EB-8208-5E3F293EFAA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KFS.UI", "KFS.UI\KFS.UI.csproj", "{69D7D315-142D-4D39-92E4-72861CA92140}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E65A96A4-82B4-4276-9AB6-57B50229455D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E65A96A4-82B4-4276-9AB6-57B50229455D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E65A96A4-82B4-4276-9AB6-57B50229455D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E65A96A4-82B4-4276-9AB6-57B50229455D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53998FEE-25DD-45EB-8208-5E3F293EFAA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53998FEE-25DD-45EB-8208-5E3F293EFAA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53998FEE-25DD-45EB-8208-5E3F293EFAA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53998FEE-25DD-45EB-8208-5E3F293EFAA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69D7D315-142D-4D39-92E4-72861CA92140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69D7D315-142D-4D39-92E4-72861CA92140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69D7D315-142D-4D39-92E4-72861CA92140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69D7D315-142D-4D39-92E4-72861CA92140}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E65A96A4-82B4-4276-9AB6-57B50229455D} = {4610919D-4A27-46A0-B8C8-3FB7A5850623}
+		{53998FEE-25DD-45EB-8208-5E3F293EFAA4} = {409F70A6-EC60-4A31-940A-3CF9BF877465}
+		{69D7D315-142D-4D39-92E4-72861CA92140} = {409F70A6-EC60-4A31-940A-3CF9BF877465}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2736B4B-96E9-4C34-8C44-7E4BA0E25AF5}
+	EndGlobalSection
+EndGlobal

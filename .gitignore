@@ -3,3 +3,10 @@
 ################################################################################
 
 /KFS/.vs/KFS/v14/.suo
+/KFS/.vs/config/applicationhost.config
+/KFS/KFS.API/bin
+/KFS/KFS.API/obj/Debug
+/KFS/KFS.BAL/bin
+/KFS/KFS.BAL/obj/Debug
+/KFS/KFS.UI/bin
+/KFS/KFS.UI/obj/Debug
