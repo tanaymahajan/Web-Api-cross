@@ -135,7 +135,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\InternController.cs" />
-    <Compile Include="Controllers\InternInfoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
