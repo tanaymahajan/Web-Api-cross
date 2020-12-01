@@ -7,21 +7,25 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using KFS.API.Models;
+using KFS.BAL.Repo;
+using KFS.BAL.interfaces;
 
 namespace KFS.API.Controllers
 {
     public class InternController : ApiController
     {
-        praticedbEntities db;
+        IInterns internrepo = null;
+        
         public InternController()
         {
-            db = new praticedbEntities();
+            internrepo = new InternRepo();
+            
         }
         [HttpGet]
         [Route("api/InterList")]
         public IHttpActionResult InterList()
         {
-            var intern = db.InternInfoes.ToList();
+            var intern = internrepo.GetAllIntern();
             if (intern != null)
             {
                 return Ok(intern);
@@ -36,7 +40,7 @@ namespace KFS.API.Controllers
         [Route("api/InterDetails")]
         public IHttpActionResult InterDetails(int id)
         {
-            var intern = db.InternInfoes.Where(x => x.Id == id).First();
+            var intern = internrepo.GetPerticulartInter(id);
             if (intern != null)
             {
                 return Ok(intern);
@@ -52,13 +56,14 @@ namespace KFS.API.Controllers
         public IHttpActionResult RegisterInter([FromBody] InternModel model)
         {
 
+
             InternInfo info = new InternInfo();
             info.First_Name = model.First_Name;
             info.Last_Name = model.Last_Name;
             info.College = model.College;
 
-           db.InternInfoes.Add(info);
-           int i=db.SaveChanges();
+           
+            int i = internrepo.AddInter(info);
             if (i >= 1)
             {
                 return Ok("Successfully Register");
@@ -72,15 +77,8 @@ namespace KFS.API.Controllers
         [Route("api/UpdateInterInfo")]
         public IHttpActionResult UpdateInterInfo(InternInfo model)
         {
-            int i = 0;
-            var data = db.InternInfoes.Where(x => x.Id == model.Id).FirstOrDefault();
-            if (data != null)
-            {
-                data.First_Name = model.First_Name;
-                data.Last_Name = model.Last_Name;
-                data.College = model.College;
-                i=db.SaveChanges();
-            }
+            int i = internrepo.UpdateInter(model);
+            
             if (i >= 1)
             {
                 return Ok("Successfully updated");
@@ -94,13 +92,8 @@ namespace KFS.API.Controllers
         [Route("api/RemoveIntern")]
         public IHttpActionResult RemoveIntern(int id)
         {
-            int i = 0;
-            var data = db.InternInfoes.Where(x => x.Id == id).FirstOrDefault();
-            if (data != null)
-            {
-                db.InternInfoes.Remove(data);
-                i = db.SaveChanges();
-            }
+            int i = internrepo.DeleteInter(id);
+            
             if (i >= 1)
             {
                 return Ok("Deleted Successfully");
