@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using KFS.BAL.interfaces;
 
 
@@ -31,6 +28,7 @@ namespace KFS.BAL.Repo
             command.Parameters.AddWithValue("@First_Name", model.First_Name);
             command.Parameters.AddWithValue("@Last_Name", model.Last_Name);
             command.Parameters.AddWithValue("@College", model.College);
+
 
             try
             {
